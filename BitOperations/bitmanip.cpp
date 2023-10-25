@@ -4,31 +4,31 @@
 
 const size_t N = 8*sizeof(uint);
 
-bool check(size_t shift, size_t number){
+bool check(size_t shift, size_t number) {
 
- return (1 << shift) & number;
- 
+    return (1 << shift) & number;
+
 }
 
 
 int main() {
 
-size_t number = 17;
+    size_t number = 17;
 
-size_t moving_bit = 1;
+    size_t moving_bit = 1;
 
-std::cout<<moving_bit<<" "<<(moving_bit << 1)<<" "<<moving_bit<<std::endl;
+    std::cout<<moving_bit<<" "<<(moving_bit << 1)<<" "<<moving_bit<<std::endl;
 
-for (auto i=0U;i<N;++i){
+    for (auto i=0U; i<N; ++i) {
 
-std::cout<<check(i,number);
-}
+        std::cout<<check(i,number);
+    }
 
-std::cout<<std::endl;
+    std::cout<<std::endl;
 
-size_t * ptr  = &number;
+    size_t * ptr  = &number;
 
-std::cout<<*ptr<<std::endl;
+    std::cout<<*ptr<<std::endl;
 
-return 0;
+    return 0;
 }
